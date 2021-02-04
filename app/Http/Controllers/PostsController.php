@@ -18,7 +18,7 @@ class PostsController extends Controller
 
       $posts = Post::all();
 
-      return view('index', compact('posts'));
+      return view('posts', compact('posts'));
 
     }
 
@@ -51,6 +51,9 @@ class PostsController extends Controller
      */
     public function show($id)
     {
+      $post = Post::find($id);
+
+      return view('watch_post', compact('post'));
       // $post = Post::find(1);
       //
       // $postInfo = $post->postToPostInformation;

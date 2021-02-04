@@ -1,0 +1,88 @@
+/* INIZIALIZZAZIONE */
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+/* HELPER */
+.border {
+  border: 1px solid black;
+}
+/* HEADER */
+header {
+  z-index: 5;
+  min-width: 1200px;
+  background-color: lightgrey;
+  border-bottom: 1px solid green;
+  height: 100px;
+  width: 100%;
+  position: fixed;
+  top: 0;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+}
+header ul {
+  width: 600px;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  list-style: none;
+}
+header ul li a {
+  text-decoration: none;
+  font-size: 20px;
+  color: grey;
+}
+header ul li a:hover {
+  font-weight: bolder;
+}
+header ul li.active a {
+  color: green;
+}
+/* POSTS */
+main.posts, main.watch-post {
+  background-color: grey;
+  position: relative;
+  top: 100px;
+  min-width: 1200px;
+  padding: 20px;
+}
+main.watch-post {
+  min-height: calc(100vh - 100px);
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+}
+main.posts div.sub-posts, main.watch-post div.sub-watch-post {
+  background-color: lightgrey;
+  padding: 5px;
+}
+main.watch-post div.sub-watch-post {
+  min-height: calc(100vh - 150px);
+  width: 90%;
+}
+main.posts div.sub-posts section.post {
+  display: flex;
+  flex-direction: row;
+  border-bottom: 1px solid grey;
+}
+main.posts div.sub-posts section.post div {
+  padding: 5px;
+}
+main.posts div.sub-posts section.post div.left {
+  width: 80%;
+}
+main.posts div.sub-posts section.post div.right {
+  width: 20%;
+}
+main.posts div.sub-posts section.post div.right a {
+  text-decoration: none;
+  color: grey;
+}
+main.posts div.sub-posts section.post div.right a:hover {
+  color: green;
+  cursor: pointer;
+}
