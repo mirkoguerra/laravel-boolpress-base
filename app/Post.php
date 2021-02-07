@@ -22,7 +22,7 @@ class Post extends Model
 
   public function postToTag() {
 
-    return $this->belongsToMany('App\Tag', 'posts_to_tags', 'tag_id', 'post_id');
+    return $this->belongsToMany('App\Tag', 'posts_to_tags', 'post_id', 'tag_id');
 
   }
 

@@ -17,9 +17,18 @@
       </div>
       <div class="right">
         <a href="{{ route('posts.show', $post->id) }}">Dettagli</a>
+        <a href="{{ route('posts.edit', $post->id) }}">Modifica</a>
+        <form action="{{ route('posts.destroy', $post->id) }}" method="post">
+            @csrf
+            @method('delete')
+            <button type="submit">Elimina</button>
+          </form>
       </div>
     </section>
     @endforeach
+    <div class="pagination">
+      {{ $posts->links() }}
+    </div>
   </div>
 </main>
 @endsection
